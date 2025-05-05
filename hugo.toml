@@ -1,0 +1,17 @@
+baseURL = 'https://github.com/Hui41/Hui41.github.io/'
+languageCode = 'en-us'
+title = 'My New Hugo SiteYY'
+theme = 'PaperMod'  
+
+[params]
+  math = true
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  hideFooter = false
+
+
+[markup.goldmark.renderer]
+  unsafe = true 

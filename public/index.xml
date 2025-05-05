@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>My New Hugo SiteYY</title>
+    <link>http://localhost:1313/Hui41/Hui41.github.io/</link>
+    <description>Recent content on My New Hugo SiteYY</description>
+    <generator>Hugo -- 0.147.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 May 2025 11:34:25 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/Hui41/Hui41.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Math Notes</title>
+      <link>http://localhost:1313/Hui41/Hui41.github.io/posts/math-notes/</link>
+      <pubDate>Mon, 05 May 2025 11:34:25 +0200</pubDate>
+      <guid>http://localhost:1313/Hui41/Hui41.github.io/posts/math-notes/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
