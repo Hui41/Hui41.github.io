@@ -27,7 +27,7 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-width: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
@@ -610,9 +610,43 @@ header, .context-menu, .megamenu-content, footer{
 
 
  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+ 
+ /* Navigation Bar Styling */
+    nav {
+      background-color: #44e6e6; /* Dark background */
+      overflow: hidden; /* Clear floats */
+      text-align: center; /* Center the navigation items */
+      padding: 10px 0; /* Add padding for height */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+    }
+
+    /* Navigation Links Styling */
+    nav a {
+      color: white; /* White text color */
+      text-decoration: none; /* Remove underline */
+      padding: 14px 20px; /* Padding around links */
+      display: inline-block; /* Horizontal alignment */
+      font-size: 18px; /* Adjust font size */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+    }
+
+    /* Hover Effect for Links */
+    nav a:hover {
+      background-color: #29c3a9; /* Change background on hover */
+      color: #ffcc00; /* Change text color on hover */
+    }
 </style><title>Hui&#39;s website</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><link rel="stylesheet" href="style.css"><h1 id='huis-website'><span>Hui&#39;s website</span></h1><p>&nbsp;</p><ul><li><p><a href='https://hui41.github.io/math'><span>数学</span></a></p></li><li><p><a href='https://hui41.github.io/explore'><span>逛一逛</span></a></p></li><li><p><a href='https://hui41.github.io/myfiles/GA.pdf'><span>GA.pdf</span></a></p></li><li><p><a href='https://hui41.github.io/myfiles/常用公式.pdf'><span>常用公式.pdf</span></a></p><p>&nbsp;</p></li></ul><hr /><blockquote><p><span>Contact: 1012442400 at qq dot com</span></p></blockquote><blockquote><p><span>About </span><a href='https://sites.google.com/view/huiliu/'><span>me</span></a><span>.</span></p></blockquote></div></div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+    
+<div id='write'  class=''><link rel="stylesheet" href="style.css"><h1 id='huis-website'><span>Hui&#39;s website</span></h1><p>&nbsp;</p><h2 id='my-information'><span>My information</span></h2><ul><li><p><span>Hometown: </span><a href='https://www.google.com/maps/place/中国福建省龙岩市武平县/@25.1431468,115.7945385,10z/data=!3m1!4b1!4m6!3m5!1s0x341715cfdb3e1db1:0x8ace52efa7f1b17e!8m2!3d24.9251599!4d116.0414!16s%2Fm%2F05c0qyc?entry=ttu'><span>Wuping</span></a><span> county,  Fujian province, PR China. </span></p></li><li><p><span>Interests: differential geometry, harmonic maps</span></p></li><li><p><span>Education:</span></p><ul><li><p><span>2014-2018, Sun Yat-sen University, bachelor</span></p></li><li><p><span>2018-2021, Sun Yat-sen University, master</span></p></li><li><p><span>2021-now, Fudan university &amp; Universität Wien, PhD student</span></p></li></ul><h2 id='articles'><span>Articles </span></h2><ol><li><p><span>TIAN CHONG, YUXIN DONG, XIN HUANG, AND HUI LIU, </span><a href='https://arxiv.org/abs/2504.01498'><span>On critical maps of the horizontal energy functional between Riemannian foliations</span></a><span> , preprint, 2025.</span></p></li><li><p><span> YUXIN DONG, HUI LIU, AND BIQIANG ZHAO, </span><a href='https://arxiv.org/abs/2504.01439'><span>On ∂b-harmonic maps from pseudo-Hermitian manifolds to Kähler manifolds</span></a><span>, preprint, 2025. </span></p></li><li><p><span>Tian Chong, Hui Liu, Lingen Lu, and Jingjing Zhang, </span><a href='https://jkms.kms.or.kr/journal/view.html?doi=10.4134/JKMS.j230637'><span>Local gradient estimate on Riemannian manifold with asymptotically non-negative Ricci curvature</span></a><span> , October 11, 2024</span></p></li><li><p><span>Hui Liu and Yongjin Li, </span><a href='https://advancesincontinuousanddiscretemodels.springeropen.com/articles/10.1186/s13662-020-02863-y'><span>Hyers–Ulam stability of linear fractional differential equations with variable coefficients</span></a><span>, Adv. Differ. Equ. 2020, 404 (2020).</span></p></li><li><p><span>Hui Liu and Yongjin Li, </span><a href='https://www.math.nthu.edu.tw/~amen/'><span>Hyers-Ulam stability of mean value points for conformable fractional differentiable functions</span></a><span>, Appl. Math. E-Notes, 20(2020), 188-198</span></p></li></ol><p>&nbsp;</p></li></ul><hr /><blockquote><p><span>Contact: 1012442400 at qq dot com</span></p></blockquote><blockquote><p><a href='https://www.researchgate.net/profile/Hui-Liu-295?ev=hdr_xprf'><span>My researchgate</span></a></p></blockquote><ul><li><p><a href='https://hui41.github.io/math'><span>数学</span></a></p></li><li><p><a href='https://hui41.github.io/explore'><span>逛一逛</span></a></p></li><li><p><a href='https://hui41.github.io/myfiles/GA.pdf'><span>GA.pdf</span></a></p></li><li><p><a href='https://hui41.github.io/myfiles/常用公式.pdf'><span>常用公式.pdf</span></a></p></li></ul></div></div>
+
 </body>
 </html>
