@@ -1,5 +1,100 @@
 /* style.css */
 
+
+/* ===== 全局基础样式 ===== */
+html {
+  overflow-x: initial !important;
+  font-size: 14px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --select-text-bg-color: #B5D6FC;
+  --select-text-font-color: auto;
+  --monospace: "Lucida Console", Consolas, "Courier", monospace;
+  --title-bar-height: 20px;
+}
+
+.mac-os-11 {
+  --title-bar-height: 28px;
+}
+
+
+/* 美化定理环境 */
+blockquote.theorem,
+blockquote.lemma,
+blockquote.definition,
+blockquote.exercise {
+  border-left: 4px solid #2c3e50;
+  padding: 0.6em 1em;
+  background-color: #f9f9f9;
+  margin: 1em 0;
+  border-radius: 6px;
+}
+
+/* 设置标题字体颜色 */
+blockquote.theorem strong,
+blockquote.lemma strong,
+blockquote.definition strong,
+blockquote.exercise strong {
+  color: #2c3e50;
+}
+
+/* 提高清晰度的公式样式 */
+mjx-container {
+  color: #1a1a1a !important;       /* 更深的文字颜色 */
+  font-size: 1.05em !important;    /* 稍微加大字号 */
+  line-height: 1.6;
+}
+
+/* 如果你使用的是 KaTeX 而不是 MathJax，可以改成这样： */
+.katex {
+  color: #1a1a1a !important;
+  font-size: 1.05em !important;
+}
+
+ /* Navigation Bar Styling */
+    nav {
+      background-color: #187e62; /* Dark background */
+      overflow: hidden; /* Clear floats */
+      text-align: center; /* Center the navigation items */
+      padding: 10px 0; /* Add padding for height */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+    }
+
+    /* Navigation Links Styling */
+    nav a {
+      color: white; /* White text color */
+      text-decoration: none; /* Remove underline */
+      padding: 14px 20px; /* Padding around links */
+      display: inline-block; /* Horizontal alignment */
+      font-size: 18px; /* Adjust font size */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+    }
+
+    /* Hover Effect for Links */
+    nav a:hover {
+      background-color: #29c3a9; /* Change background on hover */
+      color: #ffcc00; /* Change text color on hover */
+    }
+
+section {
+  padding: 20px;
+  max-width: 90%;
+  margin: 20px auto; /* 上下间距，居中 */
+  border-left: 6px solid #b6a4af;   /* 左侧彩色边 */
+  border-right: 6px solid #4ECDC4;  /* 右侧彩色边 */
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明白底，保证内容可读 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 轻微阴影，突出区块 */
+  border-radius: 8px; /* 圆角 */
+}
+
+
 /* 1. 基础重置和字体 */
 body.typora-export {
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
@@ -27,7 +122,7 @@ body.typora-export {
 .typora-export-content h2,
 .typora-export-content h3 {
   font-family: 'Merriweather', serif;
-  margin-top: 1.6em;
+  margin-top: 0.6em;
   margin-bottom: 0.6em;
   font-weight: 700;
   color: #333;
@@ -106,4 +201,28 @@ body.typora-export {
   margin-right: 6px;
   color: #6a11cb;
   font-weight: bold;
+}
+
+.theorem, .definition, .exercise, .remark {
+  border-left: 4px solid #007acc;
+  background-color: #f5faff;
+  padding: 12px 16px;
+  margin: 1.5em 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.theorem strong::before {
+  content: "📘 ";
+}
+.definition strong::before {
+  content: "📙 ";
+}
+.exercise strong::before {
+  content: "📝 ";
+}
+.remark strong::before {
+  content: "💡 ";
 }
