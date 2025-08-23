@@ -12,7 +12,7 @@ html {
 }
 
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #000000;
   --text-color: #333333;
   --select-text-bg-color: #B5D6FC;
   --select-text-font-color: auto;
