@@ -60,7 +60,7 @@ mjx-container {
 
  /* Navigation Bar Styling */
     nav {
-      background-color: #48D1CC; /* Dark background */
+      background-color: #778899; /* Dark background */
       overflow: hidden; /* Clear floats */
       text-align: center; /* Center the navigation items */
       padding: 10px 0; /* Add padding for height */
@@ -69,7 +69,7 @@ mjx-container {
 
     /* Navigation Links Styling */
     nav a {
-      color: white; /* White text color */
+      color: Black; /* White text color */
       text-decoration: none; /* Remove underline */
       padding: 14px 20px; /* Padding around links */
       display: inline-block; /* Horizontal alignment */
