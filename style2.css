@@ -1,7 +1,6 @@
- /* Modified from https://mohammadivaki.github.io/index.html*/
-<!DOCTYPE html>
+/* Modified from https://mohammadivaki.github.io/index.html*/
 html {
-  overflow-x: initial !important;
+  overflow-x: initial;
   font-size: 14px;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -12,14 +11,7 @@ html {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
-    /* body {
-      font-size: 14px;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.2;
-    } */
+
     :root {
   --bg-color: #ffffff;
   --text-color: #333333;
