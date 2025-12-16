@@ -131,7 +131,7 @@ html {
 
 section {
   padding: 20px;
-  max-width: 90%;
+  max-width: 95%;
   margin: 20px auto; /* 上下间距，居中 */
   border-left: 6px solid #b6a4af;   /* 左侧彩色边 */
   border-right: 6px solid #4ECDC4;  /* 右侧彩色边 */
