@@ -25,11 +25,11 @@ html {
 }
 
 .profile-image {
-      width: 120px;
-      height: 120px;
-      border-radius: 10px;
-      margin-right: 20px;
-      object-fit: cover;
+      width: 100px;          /* 很小 */
+      height: 100px;         /* 很小 */
+      object-fit: cover;     /* 保持比例，不拉伸 */
+      border-radius: 8px;
+      flex-shrink: 0;        /* 防止缩小 */
     }
 
 /* 美化定理环境 */
