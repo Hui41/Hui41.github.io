@@ -1,21 +1,19 @@
- /* Copy from https://mohammadivaki.github.io/index.html*/
+ /* Modified from https://mohammadivaki.github.io/index.html*/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="wEzHb2HFwR2oQut_Gt2fNRXoJ8Gqg5bvHSCoU_ESEzM" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammad N. Ivaki</title>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body {
-      font-family: "Computer Modern Sans", sans-serif;
+      font-size: 14px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
       line-height: 1.2;
       margin: 0;
       padding: 0;
-      background-color: #dcdcdc;
     }
     .container {
       width: 80%;
