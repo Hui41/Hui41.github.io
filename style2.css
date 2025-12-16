@@ -1,6 +1,6 @@
 /* Modified from https://mohammadivaki.github.io/index.html*/
 html {
-  overflow-x: initial !important;;
+  overflow-x: initial !important;
   font-size: 14px;
   background-color: var(--bg-color);
   color: var(--text-color);
