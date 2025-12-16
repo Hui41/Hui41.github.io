@@ -36,6 +36,9 @@ html {
       margin: auto;
       overflow: hidden;
 }
+#about-text {
+      flex: 1;                  /* 文字区域占据剩余空间 */
+}
 
 /* 美化定理环境 */
 blockquote.theorem,
