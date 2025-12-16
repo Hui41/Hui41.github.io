@@ -29,6 +29,7 @@ html {
       height: 100px;         /* 很小 */
       object-fit: cover;     /* 保持比例，不拉伸 */
       border-radius: 8px;
+      margin-right: 20px;       /* 图片和文字的间距 */
       flex-shrink: 0;        /* 防止缩小 */
     }
 .container {
