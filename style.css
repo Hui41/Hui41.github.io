@@ -39,6 +39,10 @@ html {
 #about-text {
       flex: 1;                  /* 文字区域占据剩余空间 */
 }
+#about-text p {
+      margin: 8px 0;           /* 段落间距 */
+      line-height: 1.5;        /* 行高 */
+}
 
 /* 美化定理环境 */
 blockquote.theorem,
