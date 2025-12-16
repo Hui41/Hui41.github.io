@@ -4,7 +4,7 @@ html {
   font-size: 14px;
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   color: var(--text-color);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 <head>
