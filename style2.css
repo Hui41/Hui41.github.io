@@ -1,0 +1,129 @@
+ /* Copy from https://mohammadivaki.github.io/index.html*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="wEzHb2HFwR2oQut_Gt2fNRXoJ8Gqg5bvHSCoU_ESEzM" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad N. Ivaki</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: "Computer Modern Sans", sans-serif;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+      background-color: #dcdcdc;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .content {
+      padding: 20px;
+      background: #f5f5f5;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    a {
+      color: #00a0a0;
+    }
+    h2, h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    p, li {
+      margin: 8px 0;
+    }
+    #about {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    #about img.profile-image {
+      max-width: 120px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+    #about img.logo {
+      max-width: 120px;
+      height: auto;
+    }
+    #about div {
+      flex: 1;
+    }
+    #awards ul, #talks ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    #awards li, #talks li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    #awards li .year, #talks li .year {
+      width: 80px;
+      flex-shrink: 0;
+      text-align: right;
+      padding-right: 10px;
+      color: black;
+    }
+    #awards, #talks, #publications {
+      border-left: 5px solid #00a0a0;
+      border-right: 5px solid #00a0a0;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+      #about {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #about img {
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      #about img.profile-image, #about img.logo {
+        max-width: 100px;
+      }
+    }
+        /* Navigation Bar Styling */
+    nav {
+      background-color: #333; /* Dark background */
+      overflow: hidden; /* Clear floats */
+      text-align: center; /* Center the navigation items */
+      padding: 10px 0; /* Add padding for height */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for 3D effect */
+    }
+
+    /* Navigation Links Styling */
+    nav a {
+      color: white; /* White text color */
+      text-decoration: none; /* Remove underline */
+      padding: 14px 20px; /* Padding around links */
+      display: inline-block; /* Horizontal alignment */
+      font-size: 18px; /* Adjust font size */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+    }
+
+    /* Hover Effect for Links */
+    nav a:hover {
+      background-color: #575757; /* Change background on hover */
+      color: #ffcc00; /* Change text color on hover */
+    }
+  </style>
+</head>
+
+
+
+</html>
