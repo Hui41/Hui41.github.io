@@ -97,7 +97,7 @@
     }
         /* Navigation Bar Styling */
     nav {
-      background-color: #333; /* Dark background */
+      background-color: #778899; /* Dark background */
       overflow: hidden; /* Clear floats */
       text-align: center; /* Center the navigation items */
       padding: 10px 0; /* Add padding for height */
@@ -106,7 +106,7 @@
 
     /* Navigation Links Styling */
     nav a {
-      color: white; /* White text color */
+      color: Black; /* White text color */
       text-decoration: none; /* Remove underline */
       padding: 14px 20px; /* Padding around links */
       display: inline-block; /* Horizontal alignment */
@@ -116,9 +116,20 @@
 
     /* Hover Effect for Links */
     nav a:hover {
-      background-color: #575757; /* Change background on hover */
+      background-color: #29c3a9; /* Change background on hover */
       color: #ffcc00; /* Change text color on hover */
     }
+
+section {
+  padding: 20px;
+  max-width: 90%;
+  margin: 20px auto; /* 上下间距，居中 */
+  border-left: 6px solid #b6a4af;   /* 左侧彩色边 */
+  border-right: 6px solid #4ECDC4;  /* 右侧彩色边 */
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明白底，保证内容可读 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 轻微阴影，突出区块 */
+  border-radius: 8px; /* 圆角 */
+}
   </style>
 </head>
 
