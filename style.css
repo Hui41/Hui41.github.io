@@ -31,6 +31,11 @@ html {
       border-radius: 8px;
       flex-shrink: 0;        /* 防止缩小 */
     }
+.container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+}
 
 /* 美化定理环境 */
 blockquote.theorem,
