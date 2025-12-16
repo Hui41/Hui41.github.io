@@ -24,6 +24,12 @@ html {
   --title-bar-height: 28px;
 }
 
+img.profile-image {
+      max-width: 120px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 20px;
+}
 
 /* 美化定理环境 */
 blockquote.theorem,
