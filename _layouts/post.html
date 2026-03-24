@@ -17,7 +17,6 @@ html {
   line-height: 1.7;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
 }
 
 body {
@@ -26,22 +25,23 @@ body {
   margin: 0;
 }
 
-/* ===== 左列：目录 ===== */
+/* ===== 左列目录（灰白风格） ===== */
 .toc {
-  flex: 0 0 250px; 
-  background-color: #f5f5f5; /* 左列灰白 */
+  flex: 0 0 250px;
+  background-color: #f5f5f5;
   padding: 20px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #333;
   position: sticky;
   top: 0;
   height: 100vh;
   overflow-y: auto;
+  border-right: 1px solid #ddd;
 }
 
 .toc h3 {
   margin-top: 0;
-  color: #333;
+  color: #222;
 }
 
 .toc ul {
@@ -57,50 +57,46 @@ body {
   color: #333;
   text-decoration: none;
   font-size: 16px;
+  transition: all 0.2s ease;
 }
 
 .toc a:hover {
-  text-decoration: underline;
-  color: #111;
+  color: #007bff;
 }
 
-/* ===== 右列：日记正文 ===== */
+/* ⭐ 当前高亮 */
+.toc a.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* ===== 右列正文 ===== */
 .content {
   flex: 1;
-  background: #d0f0fd; /* 右列浅色 */
+  background: #d0f0fd;
   padding: 30px;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
-/* 页面主标题 */
+/* 页面标题 */
 .content h1.page-title {
   text-align: center;
-  margin-top: 0;
   margin-bottom: 30px;
-  font-size: 2em;
-  color: #222;
 }
 
-/* 日记内容段落样式 */
+/* 标题 */
 .content h3 {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 10px;
   color: #222;
 }
 
+/* 段落 */
 .content p, .content li {
   margin: 10px 0;
 }
 
-/* 日期样式 */
-.date {
-  font-size: 0.9em;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-/* 脚注样式 */
+/* 脚注 */
 .footnote {
   font-size: 0.85em;
   color: #555;
@@ -110,34 +106,65 @@ body {
 </head>
 
 <body>
-  <!-- 左侧目录 -->
-  <div class="toc">
-    <h3>目录</h3>
-    <ul id="toc-list"></ul>
-  </div>
 
-  <!-- 日记内容 -->
-  <div class="content">
-    <h1 class="page-title">日记</h1>
-    {{ content }}
-  </div>
+<!-- ===== 左侧目录 ===== -->
+<div class="toc">
+  <h3>目录</h3>
+  <ul id="toc-list"></ul>
+</div>
 
-<!-- JS 动态生成 TOC -->
+<!-- ===== 内容 ===== -->
+<div class="content">
+  <h1 class="page-title">日记</h1>
+  {{ content }}
+</div>
+
+<!-- ===== JS：生成 TOC + 高亮 ===== -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+
   const tocList = document.getElementById("toc-list");
-  document.querySelectorAll(".content h3").forEach(h3 => {
+  const headings = document.querySelectorAll(".content h3");
+
+  // 生成 TOC
+  headings.forEach((h3, index) => {
     if (!h3.id) {
-      h3.id = h3.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+      h3.id = "section-" + index;
     }
+
     const li = document.createElement("li");
     const a = document.createElement("a");
+
     a.href = "#" + h3.id;
     a.textContent = h3.textContent;
+
     li.appendChild(a);
     tocList.appendChild(li);
   });
+
+  const tocLinks = document.querySelectorAll(".toc a");
+
+  // ⭐ 滚动高亮
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    headings.forEach(h3 => {
+      const rect = h3.getBoundingClientRect();
+      if (rect.top <= 120) {
+        current = h3.id;
+      }
+    });
+
+    tocLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
 });
 </script>
+
 </body>
 </html>
