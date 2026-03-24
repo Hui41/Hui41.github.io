@@ -1,0 +1,10 @@
+title: "我的日记博客"
+baseurl: ""       # 如果是 username.github.io，保持空
+url: "https://hui41.github.io"
+markdown: kramdown
+
+# MathJax 支持
+kramdown:
+  math_engine: mathjax
+  math_engine_opts:
+    preview: false
