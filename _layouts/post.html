@@ -13,9 +13,9 @@
 <style>
 /* ===== 页面基础 ===== */
 html {
-  font-size: 16px; /* 字体稍大 */
-  line-height: 1.7; /* 行距稍大 */
-  background: #d0f0fd; /* 页面背景颜色，可修改 */
+  font-size: 16px;
+  line-height: 1.7;
+  background: #a0c4d6; /* 调暗背景颜色 */
   color: #333;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -34,7 +34,7 @@ body {
 
 /* ===== 左侧目录 ===== */
 .toc {
-  flex: 0 0 200px; /* 固定宽度 */
+  flex: 0 0 200px;
   position: sticky;
   top: 20px;
   background-color: rgba(255,255,255,0.85);
@@ -59,7 +59,7 @@ body {
 .toc a {
   text-decoration: none;
   color: #007bff;
-  font-size: 16px; /* 目录字体稍大 */
+  font-size: 16px;
 }
 
 .toc a:hover {
@@ -71,10 +71,19 @@ body {
   flex: 1;
 }
 
+/* 页面主标题 */
+.content h1.page-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #222;
+}
+
 /* ===== 每条日记独立方框 ===== */
 .entry {
-  padding: 20px; /* 内边距稍大 */
-  margin-bottom: 25px; /* 日记间距略大 */
+  padding: 20px;
+  margin-bottom: 25px;
   background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
@@ -82,7 +91,7 @@ body {
 
 /* 段落间距 */
 .entry p, .entry li {
-  margin: 10px 0; /* 段落间距稍大 */
+  margin: 10px 0;
 }
 
 /* 日期样式 */
@@ -98,7 +107,6 @@ body {
   color: #555;
   margin-top: 10px;
 }
-
 </style>
 </head>
 
@@ -113,6 +121,8 @@ body {
 
   <!-- 日记内容 -->
   <div class="content">
+    <!-- 页面主标题 -->
+    <h1 class="page-title">日记</h1>
     {{ content }}
   </div>
 
