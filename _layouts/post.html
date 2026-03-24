@@ -15,36 +15,33 @@
 html {
   font-size: 16px;
   line-height: 1.7;
-  background: #a0c4d6; /* 调暗背景颜色 */
-  color: #333;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
   margin: 0;
   padding: 0;
 }
 
-.container {
+body {
   display: flex;
-  max-width: 95%;
-  margin: 20px auto;
-  gap: 20px;
+  min-height: 100vh;
+  margin: 0;
 }
 
-/* ===== 左侧目录 ===== */
+/* ===== 左列：目录 ===== */
 .toc {
-  flex: 0 0 200px;
+  flex: 0 0 250px; 
+  background-color: #7da7d9; /* 左列深色 */
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
   position: sticky;
-  top: 20px;
-  background-color: rgba(255,255,255,0.85);
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .toc h3 {
   margin-top: 0;
+  color: #fff;
 }
 
 .toc ul {
@@ -53,22 +50,27 @@ body {
 }
 
 .toc li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .toc a {
+  color: #fff;
   text-decoration: none;
-  color: #007bff;
   font-size: 16px;
 }
 
 .toc a:hover {
   text-decoration: underline;
+  color: #ffeb3b;
 }
 
-/* ===== 内容区 ===== */
+/* ===== 右列：日记正文 ===== */
 .content {
   flex: 1;
+  background: #d0f0fd; /* 右列浅色 */
+  padding: 30px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* 页面主标题 */
@@ -80,17 +82,14 @@ body {
   color: #222;
 }
 
-/* ===== 每条日记独立方框 ===== */
-.entry {
-  padding: 20px;
-  margin-bottom: 25px;
-  background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
+/* 日记内容段落样式 */
+.content h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #222;
 }
 
-/* 段落间距 */
-.entry p, .entry li {
+.content p, .content li {
   margin: 10px 0;
 }
 
@@ -111,8 +110,6 @@ body {
 </head>
 
 <body>
-<div class="container">
-
   <!-- 左侧目录 -->
   <div class="toc">
     <h3>目录</h3>
@@ -121,14 +118,11 @@ body {
 
   <!-- 日记内容 -->
   <div class="content">
-    <!-- 页面主标题 -->
     <h1 class="page-title">日记</h1>
     {{ content }}
   </div>
 
-</div>
-
-<!-- ===== JS 动态生成 TOC ===== -->
+<!-- JS 动态生成 TOC -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const tocList = document.getElementById("toc-list");
