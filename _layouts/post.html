@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>{{ page.title }}</title>
 
-<!-- MathJax 支持公式 -->
+<!-- MathJax -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -12,43 +12,80 @@
 
 <style>
 html {
-  overflow-x: initial !important;
   font-size: 14px;
-  /* 背景颜色，可修改 */
-  background: #d0f0fd;
+  background: #d0f0fd; /* 背景颜色，可修改 */
   color: var(--text-color);
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
 }
 
 :root {
   --text-color: #333333;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
+body {
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  display: flex;
+  max-width: 95%;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* 左侧目录 */
+.toc {
+  flex: 0 0 200px; /* 固定宽度 */
+  position: sticky;
+  top: 20px;
+  background-color: rgba(255,255,255,0.85);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.toc h3 {
+  margin-top: 0;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.toc li {
+  margin-bottom: 8px;
+}
+
+.toc a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+/* 内容区 */
 .content {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.85); /* 半透明白底 */
-  margin-top: 20px;
-  border-radius: 10px;
+  flex: 1;
+}
+
+/* 每条日记独立方框 */
+.entry {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 6px solid #b6a4af;
+  border-right: 6px solid #4ECDC4;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
 h1 {
   text-align: center;
-}
-
-a {
-  color: #00a0a0;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #29c3a9;
+  margin-top: 0;
 }
 
 .date {
@@ -61,12 +98,26 @@ a:hover {
 
 <body>
 <div class="container">
-  <h1>{{ page.title }}</h1>
 
-  <!-- 单篇文章内容 -->
+  <!-- 左侧目录 -->
+  <div class="toc">
+    <h3>目录</h3>
+    <ul>
+      {% assign headers = page.content | markdownify | split:'<h3>' %}
+      {% for header in headers %}
+        {% if header contains '</h3>' %}
+          {% assign title = header | split:'</h3>' | first %}
+          <li><a href="#{{ title | strip_html | slugify }}">{{ title | strip_html }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- 日记内容 -->
   <div class="content">
     {{ content }}
   </div>
+
 </div>
 </body>
 </html>
