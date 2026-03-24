@@ -11,8 +11,10 @@
 </script>
 
 <style>
+/* ===== 页面基础 ===== */
 html {
-  font-size: 14px;
+  font-size: 16px; /* 字体稍大 */
+  line-height: 1.7; /* 行距稍大 */
   background: #d0f0fd; /* 页面背景颜色，可修改 */
   color: #333;
   font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +32,7 @@ body {
   gap: 20px;
 }
 
-/* 左侧目录 */
+/* ===== 左侧目录 ===== */
 .toc {
   flex: 0 0 200px; /* 固定宽度 */
   position: sticky;
@@ -57,24 +59,30 @@ body {
 .toc a {
   text-decoration: none;
   color: #007bff;
+  font-size: 16px; /* 目录字体稍大 */
 }
 
 .toc a:hover {
   text-decoration: underline;
 }
 
-/* 内容区 */
+/* ===== 内容区 ===== */
 .content {
   flex: 1;
 }
 
-/* 每条日记独立方框，无彩带 */
+/* ===== 每条日记独立方框 ===== */
 .entry {
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 20px; /* 内边距稍大 */
+  margin-bottom: 25px; /* 日记间距略大 */
   background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
+}
+
+/* 段落间距 */
+.entry p, .entry li {
+  margin: 10px 0; /* 段落间距稍大 */
 }
 
 /* 日期样式 */
@@ -110,7 +118,7 @@ body {
 
 </div>
 
-<!-- JS 动态生成 TOC -->
+<!-- ===== JS 动态生成 TOC ===== -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const tocList = document.getElementById("toc-list");
