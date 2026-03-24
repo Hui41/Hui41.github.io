@@ -4,7 +4,12 @@ url: "https://hui41.github.io"
 markdown: kramdown
 
 # MathJax 支持
+markdown: kramdown
 kramdown:
+  input: GFM       # 支持 GitHub 风格 Markdown
   math_engine: mathjax
   math_engine_opts:
     preview: false
+  parse_block_html: true
+
+    
