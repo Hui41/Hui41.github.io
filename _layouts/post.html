@@ -103,6 +103,54 @@ body {
   color: #555;
   margin-top: 10px;
 }
+
+/* 代码块样式 */
+pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 15px 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+code {
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.9em;
+}
+
+/* 行内代码 */
+:not(pre) > code {
+  background: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #e74c3c;
+  font-size: 0.85em;
+}
+
+/* 代码块语言标识 */
+.highlight {
+  position: relative;
+}
+
+.highlight::before {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #888;
+  font-size: 0.8em;
+  font-family: monospace;
+}
+
+/* Rouge 高亮主题（可选） */
+.highlight .c { color: #75715e; } /* 注释 */
+.highlight .k { color: #66d9ef; } /* 关键字 */
+.highlight .s { color: #e6db74; } /* 字符串 */
+.highlight .n { color: #f8f8f2; } /* 变量名 */
+.highlight .p { color: #f8f8f2; } /* 标点 */       
+        
 </style>
 </head>
 
