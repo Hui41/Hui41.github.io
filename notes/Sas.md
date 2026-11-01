@@ -1,4 +1,3 @@
-
 ---
 layout: note
 title: Sasakian Manifolds
@@ -22,12 +21,10 @@ Consider the Heisenberg group $\mathbb{H}^m$.
 Its standard contact form is
 
 $$
-\theta = dt +
-\frac{i}{2}
-\sum_{\alpha=1}^m
+\theta = dt + \frac{i}{2}
+\sum_{\alpha=1}^{m}
 \left(
 z^\alpha d\bar z^\alpha
--
-\bar z^\alpha dz^\alpha
+-\bar z^\alpha dz^\alpha
 \right).
 $$
