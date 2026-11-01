@@ -7,30 +7,27 @@ permalink: /notes/geometry/sasakian/
 
 # Sasakian Manifolds
 
-Let \((M^{2m+1},H,J,\theta)\) be a
-pseudo-Hermitian manifold.
+Let $M$ be a pseudo-Hermitian manifold.
 
-## Definition
+We write
 
-The pseudo-Hermitian structure is called
-Sasakian if its pseudo-Hermitian torsion vanishes.
+$$
+(M^{2m+1},H,J,\theta).
+$$
 
 ## Example: Heisenberg Group
 
-Consider the Heisenberg group \(\mathbb H^m\).
+Consider the Heisenberg group $\mathbb{H}^m$.
 
-Its standard contact form is given by
+Its standard contact form is
 
-\[
-\theta = dt
-+ \frac{i}{2}\sum_{\alpha=1}^m
+$$
+\theta = dt +
+\frac{i}{2}
+\sum_{\alpha=1}^m
 \left(
 z^\alpha d\bar z^\alpha
--\bar z^\alpha dz^\alpha
+-
+\bar z^\alpha dz^\alpha
 \right).
-\]
-
-## Remarks
-
-The Sasakian condition is closely related to
-the geometry of the Reeb vector field.
+$$
