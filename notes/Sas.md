@@ -2,7 +2,7 @@
 ---
 layout: note
 title: Sasakian Manifolds
-permalink: /notes/geometry/sasakian/
+permalink: /notes/Sas
 ---
 
 # Sasakian Manifolds
