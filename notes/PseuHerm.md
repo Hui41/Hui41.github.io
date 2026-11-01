@@ -1,7 +1,7 @@
 ---
 layout: note
 title: Pseudo-Hermitian Geometry
-permalink: /notes/Sas
+permalink: /notes/PseuHerm
 ---
 
 \section{Preliminaries}
