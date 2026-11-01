@@ -4,7 +4,9 @@ title: Pseudo-Hermitian Geometry
 permalink: /notes/PseuHerm
 ---
 
-## Preliminaries
+{% raw %}
+
+\section{Preliminaries}
 
 Let $M^{2m+1}$ be a $(2m+1)$-dimensional smooth orientable manifold. A \emph{%
 CR structure} on $M^{2m+1}$ is a complex rank-$m$ subbundle $H^{1,0} $ of $%
@@ -260,3 +262,5 @@ the divergence and codifferential respectively.
     The Levi distribution $H(M)$ is minimal and 
     $$ \trace (\tau) =0. $$ 
 \end{proposition}
+
+{% endraw %}
